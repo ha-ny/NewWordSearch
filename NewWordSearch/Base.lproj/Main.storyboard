@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--New Word Search View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="NewWordSearchViewController" customModule="NewWordSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="신조어를 입력하세요" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MrR-rN-jiJ">
+                                <rect key="frame" x="16" y="110" width="346" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="qHh-ng-QGW"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="returnKeyPress:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="Xmn-Bj-7Cp"/>
+                                    <action selector="textFieldClick:" destination="BYZ-38-t0r" eventType="touchDown" id="Bce-9l-0So"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="viA-r8-ZdZ">
+                                <rect key="frame" x="362" y="110" width="50" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="6rC-3c-wge"/>
+                                    <constraint firstAttribute="height" constant="50" id="HqS-zC-0lw"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="">
+                                    <imageReference key="image" image="magnifyingglass.circle.fill" catalog="system" symbolScale="large"/>
+                                </state>
+                                <buttonConfiguration key="configuration" style="plain" title="">
+                                    <imageReference key="image" image="magnifyingglass" catalog="system" symbolScale="large"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="searchButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G2i-3b-Fdb"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="izI-uY-H7K">
+                                <rect key="frame" x="16" y="313" width="396" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="8Qr-sN-z6q"/>
+                                </constraints>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NkX-hZ-VT2">
+                                <rect key="frame" x="16" y="175" width="382" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="rXO-dd-iLE"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="BSy-gW-Xlu"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="nCM-pJ-kJu"/>
+                            </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQ8-Lb-3q7">
+                                <rect key="frame" x="36" y="423" width="356" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Qvb-sy-98p"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="izI-uY-H7K" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="2ch-oF-F7p"/>
+                            <constraint firstItem="izI-uY-H7K" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="8Wz-hn-oLy"/>
+                            <constraint firstItem="eQ8-Lb-3q7" firstAttribute="centerY" secondItem="izI-uY-H7K" secondAttribute="centerY" id="9SR-gp-ceo"/>
+                            <constraint firstItem="NkX-hZ-VT2" firstAttribute="trailing" secondItem="viA-r8-ZdZ" secondAttribute="trailing" id="CYc-GW-BIF"/>
+                            <constraint firstItem="MrR-rN-jiJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="63" id="FxY-C0-f4w"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="viA-r8-ZdZ" secondAttribute="trailing" constant="16" id="NF8-xj-3gn"/>
+                            <constraint firstItem="MrR-rN-jiJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="P5b-uw-cKN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="izI-uY-H7K" secondAttribute="trailing" constant="16" id="Ttp-T8-uIP"/>
+                            <constraint firstItem="NkX-hZ-VT2" firstAttribute="leading" secondItem="MrR-rN-jiJ" secondAttribute="leading" id="bSS-t9-9y4"/>
+                            <constraint firstItem="NkX-hZ-VT2" firstAttribute="top" secondItem="MrR-rN-jiJ" secondAttribute="bottom" constant="10" id="bau-vw-IwJ"/>
+                            <constraint firstItem="eQ8-Lb-3q7" firstAttribute="trailing" secondItem="izI-uY-H7K" secondAttribute="trailing" constant="-20" id="eoF-iG-vCo"/>
+                            <constraint firstItem="viA-r8-ZdZ" firstAttribute="leading" secondItem="MrR-rN-jiJ" secondAttribute="trailing" id="j0j-7X-GQN"/>
+                            <constraint firstItem="eQ8-Lb-3q7" firstAttribute="leading" secondItem="izI-uY-H7K" secondAttribute="leading" constant="20" id="kmQ-3n-0d2"/>
+                            <constraint firstItem="viA-r8-ZdZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="63" id="l23-tr-sdj"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="z39-4a-vZZ" appends="YES" id="m95-TW-VBK"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="keyWordScrollView" destination="NkX-hZ-VT2" id="ehr-ZR-BKK"/>
+                        <outlet property="newWordTextField" destination="MrR-rN-jiJ" id="DUn-BC-caG"/>
+                        <outlet property="resultLabel" destination="eQ8-Lb-3q7" id="Fnq-WV-r6T"/>
+                        <outlet property="searchButton" destination="viA-r8-ZdZ" id="zqU-Yl-Vg8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="z39-4a-vZZ">
+                    <connections>
+                        <action selector="touchViewKeyBoardDown:" destination="BYZ-38-t0r" id="UTd-4m-s8p"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="100.00000000000001" y="-28.125"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="300" height="300"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <image name="magnifyingglass.circle.fill" catalog="system" width="128" height="123"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
