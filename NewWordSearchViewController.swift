@@ -22,14 +22,22 @@ class NewWordSearchViewController: UIViewController {
     
     var keyWordArray = [String]()
     
-    let NewWords = [
-        "스불재":"스스로 불러온 재앙의 줄임말",
-        "좋댓구알":"좋아요, 댓글, 구독, 알림 설정의 줄임말",
-        "점메추":"점심 메뉴 추천의 줄임말",
-        "갑분싸":"갑자기 분위기가 싸해짐의 줄임말",
-        "별다줄":"별걸 다 줄인다의 줄임말"
-    ]
+    enum NewWords: String{
+        case 스불재
+        case 좋댓구알
+        case 점메추
+        case 갑분싸
+        case 별다줄
+    }
     
+    let newWords: [NewWords: String] = [
+        .스불재 :"스스로 불러온 재앙의 줄임말",
+        .좋댓구알 :"좋아요, 댓글, 구독, 알림 설정의 줄임말",
+        .점메추 :"점심 메뉴 추천의 줄임말",
+        .갑분싸 :"갑자기 분위기가 싸해짐의 줄임말",
+        .별다줄 :"별걸 다 줄인다의 줄임말"
+    ]
+
     override func viewDidLoad() {
         super.viewDidLoad()
         newWordTextField.attributedPlaceholder = NSAttributedString(string: "신조어를 입력하세요", attributes: [NSAttributedString.Key.foregroundColor : UIColor.gray])
@@ -48,8 +56,8 @@ class NewWordSearchViewController: UIViewController {
         }else{
             keyWordArray.insert(newWordTextField.text!, at: 0)
             
-            for newWord in NewWords{
-                if newWord.key == newWordTextField.text!{
+            for newWord in newWords{
+                if newWord.key.rawValue == newWordTextField.text!{
                     textSetting(labelMessage: newWord.value)
                     return
                 }
